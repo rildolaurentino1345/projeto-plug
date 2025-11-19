@@ -1,0 +1,273 @@
+        /*Estilos Gerais*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        :root {
+            --cor-pricipal: #223242;
+            --cor-secundaria: #151922;
+            --cor-texto-primario: #FFFFFF;
+            --cor-texto-secundario: #000416;
+            --cor-fundo-btn: #42C07A;
+            --cor-btn-hover: #36A267;
+
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: auto;
+            padding: 0 10px;
+        }
+
+        a {
+            color: var(--cor-texto-primario);
+            font-size: clamp(.8rem, .5vw + 1rem, 1.2rem);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 3.5vw + 1rem, 3.5rem);
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 3.5vw + 1rem, 3rem);
+            margin: 40px 0;
+        }
+
+
+        p {
+            font-size: clamp(1rem, 1vw + 1rem, 1.4rem);
+        }
+
+        .btn-primary {
+            color: var(--cor-texto-primario);
+            padding: 10px 40px;
+            background-color: var(--cor-fundo-btn);
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--cor-btn-hover);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--cor-texto-primario);
+            padding: 10px 40px;
+            border-radius: 5px;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .btn-tertiary {
+            border: 1px solid var(--cor-texto-secundario);
+            color: var(--cor-texto-secundario);
+            padding: 8px 40px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            transition: .3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--cor-btn-hover);
+        }
+
+
+
+        /*-----------Estilo Body----------- */
+        body {
+            font-family: Helvetica, sans-serif;
+            line-height: 1.4;
+            color: var(--cor-texto-primario);
+            background-color: azure;
+        }
+
+        /*-----------Estilo Body----------- */
+        header {
+            background-color: var(--cor-pricipal);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+
+        }
+
+        nav ul a:hover {
+            color: var(--cor-fundo-btn);
+        }
+
+        nav div.logo a {
+            font-size: clamp(1rem, 1vw + 1rem, 1.6rem);
+            color: var(--cor-texto-primario);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /*Botão menu Hamburguer*/
+        .hamburguer {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+
+        }
+
+        .hamburguer span {
+            width: 28px;
+            height: 3px;
+            background-color: var(--cor-texto-primario);
+            border-radius: 2px;
+            transition: .3s ease;
+        }
+
+        /* estilo do site Primeira seção*/
+        div.img {
+            position: relative;
+            height: 70vh;
+            background: url(../image/computador1.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        div.overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(21, 27, 32, 0.8);
+            z-index: 1;
+        }
+
+        .hero {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+        }
+
+        div.texto {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            padding: 0 10px;
+            z-index: 3;
+        }
+
+        div.btn {
+            display: block;
+            margin: 20px 0;
+            padding: 0 10px;
+        }
+
+        /*Estilo Serviços*/
+        section.service-box {
+            color: black;
+            margin: 50px 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+        }
+
+        div.service-icons {
+            padding: 20px 0;
+        }
+
+        div.service-icons i {
+            font-size: clamp(30px, 4vw, 50px);
+            transition: .3s ease;
+            
+
+        }
+        div.service-icons i:hover {
+            color: var(--cor-btn-hover);
+        }
+
+
+        .service-items {
+            border: 1px solid var(--cor-texto-secundario);
+            padding: 10px 20px;
+            border-radius: 7px;
+        }
+
+        /*Estilos seção Sobre */
+        section.about {
+
+            color: var(--cor-texto-secundario);
+            margin: 80px 0;
+        }
+
+        section.about .container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 100px;
+
+        }
+
+        section.about .about-text {
+            width: 100%;
+            max-width: 600px;
+
+        }
+
+        section.about div.image img {
+            width: 100%;
+            max-width: 640px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        section.about div.know {
+            margin: 50px 0;
+        }
+
+        /*Estilo chamada para ação*/
+        section.action {
+            color: var(--cor-texto-secundario);
+        }
+
+        section.action .container {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+        }
+
+        /*Estilo footer*/
+        footer {
+            color: var(--cor-texto-primario);
+            background-color: var(--cor-pricipal);
+            margin-top: 50px;
+
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: .8em;
+        }
