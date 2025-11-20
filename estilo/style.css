@@ -214,6 +214,9 @@
             padding: 10px 20px;
             border-radius: 7px;
         }
+        #service {
+          scroll-margin-top: 100px;  
+        }
 
         /*Estilos seção Sobre */
         section.about {

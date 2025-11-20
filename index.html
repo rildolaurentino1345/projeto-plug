@@ -128,7 +128,7 @@
 
         </section>
         <footer>
-            <p>Plugmática LTDA &COPY; 2025. Todos Direitos Reservados </p>
+            <p>&COPY; <span id="ano"></span>  Plugmática. Todos Direitos Reservados </p>
         </footer>
     </main>
 
@@ -137,10 +137,14 @@
 
 
     <script>
+        document.getElementById('ano').textContent = new Date().getFullYear();
         const hamburguer = document.getElementById("hamburguer");
         const navList = document.getElementById("nav-list");
 
         hamburguer.addEventListener("click", () => {
+            navList.classList.toggle("active");
+        });
+         navList.addEventListener("mouseleave", () => {
             navList.classList.toggle("active");
         });
     </script>
